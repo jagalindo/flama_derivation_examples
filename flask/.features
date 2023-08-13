@@ -1,0 +1,12 @@
+{
+    "add": true,
+    "subtract": true,
+    "multiply": true,
+    "divide": true,
+    "sqrt": true,
+    "exp": true,
+    "modulus": true,
+    "absolute": true,
+    "log": true,
+    "factorial": true
+}

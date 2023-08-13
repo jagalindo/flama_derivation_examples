@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <form method="POST">
+        <input type="text" name="num1" placeholder="First number">
+        {% for op_name, operation in operations.items() if flags.get(op_name, False) %}
+            {% if operation.needs_two_nums %}
+                <input type="text" name="num2" placeholder="Second number">
+            {% endif %}
+            <button type="submit" name="operation" value="{{ op_name }}">{{ operation.label }}</button>
+        {% endfor %}
+    </form>
+    <p>Result: {{ result }}</p>
+</body>
+</html>
